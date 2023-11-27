@@ -22,29 +22,29 @@ cd ./example/maven-example
 
 ### Build Maven Project
 - STEP 3 : Run 
-- ```
-- jf mvn clean install -f pom.xml --build-name payment-maven --build-number 2.0.0
-- ```
+  ```
+  jf mvn clean install -f pom.xml --build-name payment-maven --build-number 2.0.0
+  ```
 
 ### Collect environment variables.
 - STEP 4 : Run 
-- ```
-- jf rt build-collect-env payment-maven 2.0.0
-- ```
+  ```
+  jf rt build-collect-env payment-maven 2.0.0
+  ```
 ### Collect VCS details from git and add them to a build.
 - STEP 5 : Run 
-- ```
-- jf rt build-add-git payment-maven 2.0.0
-- ```
+  ```
+  jf rt build-add-git payment-maven 2.0.0
+  ```
 ### Publish build info.
 - STEP 6 : Run 
-```
-jf rt build-publish payment-maven 2.0.0
-```
+  ```
+  jf rt build-publish payment-maven 2.0.0
+  ```
 ### promote build in Artifactory.
 - STEP 7 : Run 
   ```
-   jf rt build-promote payment-maven 2.0.0 payment-maven-qa-local --status='QA candidate' --comment='webservice is now QA candidate and hand over for regression test' --copy=true --props="maintainer=SolEng;stage=qa"
+  jf rt build-promote payment-maven 2.0.0 payment-maven-qa-local --status='QA candidate' --comment='webservice is now QA candidate and hand over for regression test' --copy=true --props="maintainer=SolEng;stage=qa"
   ```
 ### set properties
 - STEP 8 : Run 
@@ -56,9 +56,9 @@ jf rt build-publish payment-maven 2.0.0
 - STEP 9 :
 - Go back to the root folder of the lab `cd ../..`
 - Run 
- ```
+  ```
   jf ds rbc --spec=rb-spec.json rb_devnext 1.0.0 --desc="release candidate"
- ```
+  ```
 
 ### SIGN RELEASE BUNDLE
 - STEP 10 : Run 
@@ -72,5 +72,5 @@ Example `dsod23loe107` => Go to `Administration > Platform management > Register
 
 - STEP 11 : Run 
   ```
-   jf ds rbd --dist-rules=dist-rules.json rb_devnext 1.0.0
+  jf ds rbd --dist-rules=dist-rules.json rb_devnext 1.0.0
   ```
