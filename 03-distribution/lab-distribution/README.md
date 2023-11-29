@@ -17,7 +17,7 @@ cd ./example/maven-example
 ### STEP 2 : Configure the  Maven Config
 - Run
   ```
-  jf mvnc --server-id-resolve swampup --server-id-deploy swampup --repo-resolve-releases payment-maven-dev-virtual --repo-resolve-snapshots payment-maven-dev-virtual --repo-deploy-releases payment-maven-dev-virtual --repo-deploy-snapshots payment-maven-dev-virtual
+  jf mvnc --server-id-resolve devnext --server-id-deploy swampup --repo-resolve-releases payment-maven-dev-virtual --repo-resolve-snapshots payment-maven-dev-virtual --repo-deploy-releases payment-maven-dev-virtual --repo-deploy-snapshots payment-maven-dev-virtual
   ```
 
 ### STEP 3 : Build Maven Project
